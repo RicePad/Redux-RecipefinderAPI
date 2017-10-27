@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {Form, FormControl, FormGroup, ControlLabel, Button } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { showRecipes } from '../actions';
 
 class SearchRecipe extends Component {
 	constructor(props){
@@ -18,9 +20,11 @@ class SearchRecipe extends Component {
 		console.log('this.state', this.state, 'url', url)
 
 		fetch(url, {
-			method: 'GET'
-		}).then(response => response.json())
-			.then(json => console.log('recipes', json));
+      method: 'GET'
+    }).then(response => response.json())
+      .then(json => {
+        this.props.showRecipes(json.results)
+      });
 
 	}
 
@@ -67,4 +71,5 @@ class SearchRecipe extends Component {
 }
 
 
-export default SearchRecipe;
+
+export default connect(null, { showRecipes })(SearchRecipe);
