@@ -5,26 +5,34 @@ class SearchRecipe extends Component {
 
 	render(){
 		return(
-			<div>
+			<div className="container"> 
+			<div className="search-recipe">
 				<h2>RicePad Recipe Finder</h2>
-				<Form>
+				<br/>
+				<Form inline>
 					<FormGroup>
-						<ControlLabel>Find a dish</ControlLabel>
+						<ControlLabel>Ingredients</ControlLabel>
+						<br/>
 						<FormControl 
 							type='text' 
-						    placeholder="chicken alfredo, spaghetti"
+						    placeholder='salta, pepper, tomato'
 						    >
 						</FormControl>
 					</FormGroup>
-					{' '}
+					<br/>
 					<FormGroup>
-						<ControlLabel>Find by ingredients</ControlLabel>
+						<ControlLabel>Find a dish</ControlLabel>
+						<br/>
 						<FormControl 
 							type='text'  
-							placeholder="salt, pepper, tomatoe">
+							placeholder="chicken alfredo, spaghetti">
 						</FormControl>
 					</FormGroup>
+						<br/>
+
+					<Button>Search</Button>
 				</Form>
+			</div>
 			</div>
 			)
 	}
