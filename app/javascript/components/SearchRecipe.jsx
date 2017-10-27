@@ -14,7 +14,7 @@ class SearchRecipe extends Component {
 
 	search(){
 		let {ingredients, dish } = this.state;
-		const url = `https://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`
+		const url = `http://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`
 		console.log('this.state', this.state, 'url', url)
 
 		fetch(url, {
@@ -32,7 +32,7 @@ class SearchRecipe extends Component {
 				<br/>
 				<Form inline>
 					<FormGroup>
-						<ControlLabel>Ingredients</ControlLabel>
+						<div className="ctrl-label"><ControlLabel>Ingredients</ControlLabel></div>
 						<br/>
 						<FormControl
 							type='text' 
@@ -43,7 +43,7 @@ class SearchRecipe extends Component {
 					</FormGroup>
 					<br/>
 					<FormGroup>
-						<ControlLabel>Find a dish</ControlLabel>
+						<div className="ctrl-label"><ControlLabel>Find a dish</ControlLabel></div>
 						<br/>
 						<FormControl 
 							type='text'  
