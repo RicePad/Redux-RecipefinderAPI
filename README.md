@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Recipe Finder Application created using Rails 5.1 webpack integration with React and Redux using recipepuppyAPI. 
 
-Things you may want to cover:
+Now I can learn how to make good salsa.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
+DEMO LINK: https://ricepad-recipes.herokuapp.com/
 * ...
