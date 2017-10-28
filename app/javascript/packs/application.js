@@ -9,7 +9,7 @@ import reducers from '../reducers';
 
 
 const store = createStore(reducers);
-console.log('store.getState()', store.getState())
+// console.log('store.getState()', store.getState())
 store.subscribe(() => console.log('store', store.getState()));
 
 
