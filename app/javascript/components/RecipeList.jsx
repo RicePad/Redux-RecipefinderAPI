@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import RecipeItems from './RecipeItems';
 
 
 class RecipeList extends Component{
@@ -9,11 +10,15 @@ class RecipeList extends Component{
 		return (
 			<div>
 				<h2>List of Recipes</h2>
+				{' '}
 				<div>
 					{
-						this.props.recipes.map(recipe => {
+						this.props.recipes.map((recipe, index) => {
 							return(
-								<div>{recipe.title}</div>
+								  <RecipeItems 
+								  	recipe = {recipe}
+								  	key= {index}
+								   />
 								)
 						})
 					}
@@ -30,4 +35,4 @@ function mapStateToProps(state){
 }
 
 
-export default connect(mapStateToProps)(RecipeList);
+export default connect(mapStateToProps)(RecipeList);	
