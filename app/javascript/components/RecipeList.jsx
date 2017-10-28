@@ -9,9 +9,9 @@ class RecipeList extends Component{
 		console.log('this.props from RecipeList', this.props)
 		return (
 			<div>
-				<h2>List of Recipes</h2>
-				{' '}
 				<div>
+					    <h2>List of Recipes</h2>
+
 					{
 						this.props.recipes.map((recipe, index) => {
 							return(
