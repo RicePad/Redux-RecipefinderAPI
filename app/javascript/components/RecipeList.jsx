@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import RecipeItems from './RecipeItems';
+import { Link } from 'react-router-dom';
 
 
 class RecipeList extends Component{
@@ -11,6 +12,7 @@ class RecipeList extends Component{
 			<div>
 				<div>
 					    <h2>List of Recipes</h2>
+					    
 
 					{
 						this.props.recipes.map((recipe, index) => {

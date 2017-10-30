@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Form, FormControl, FormGroup, ControlLabel, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { showRecipes } from '../actions';
+import { Link } from 'react-router-dom';
 
 class SearchRecipe extends Component {
 	constructor(props){
@@ -33,6 +34,8 @@ class SearchRecipe extends Component {
 			<div className="container"> 
 			<div className="search-recipe">
 				<h2>RicePad Recipe Finder</h2>
+				 <div><Link to='/favorites' className='link'>Favorite Recipes</Link></div>
+
 				<br/>
 				<Form inline>
 					<FormGroup>
@@ -63,6 +66,7 @@ class SearchRecipe extends Component {
 					>Search
 					</Button>
 				</Form>
+
 			</div>
 			</div>
 			)
