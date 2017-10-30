@@ -14,8 +14,8 @@ class RecipeItems extends Component {
 	}
 
 	starred(recipe){
+		 this.props.favoriteRecipes(recipe);		
 		 this.setState(() => {favorited: true});
-		this.props.favoriteRecipes(recipe);		
 
 	}
 	render(){
@@ -28,7 +28,8 @@ class RecipeItems extends Component {
 				  
 					{ 
 
-					this.state.starred ?
+                    this.props.favoritedButton ?
+						this.state.starred ?
 
 						<div></div>
 
@@ -39,6 +40,9 @@ class RecipeItems extends Component {
 							>
 							&#9734;
 						</div>
+					:
+
+						<div></div>
 
 					}
 

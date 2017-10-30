@@ -18,6 +18,7 @@ class RecipeList extends Component{
 								  <RecipeItems 
 								  	recipe = {recipe}
 								  	key= {index}
+								  	favoriteButton={true}
 								   />
 								)
 						})
