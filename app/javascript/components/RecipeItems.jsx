@@ -26,25 +26,21 @@ class RecipeItems extends Component {
 				<div className="recipe-item">
 				
 				  
-					{ 
-
-                    this.props.favoritedButton ?
-						this.state.starred ?
-
-						<div></div>
-
-					:
-						<div 
-							onClick={()=> this.starred(recipe)}
-
-							>
-							&#9734;
-						</div>
-					:
-
-						<div></div>
-
-					}
+					{
+				          this.props.favoriteButton ?
+				            this.state.starred ?
+				              <div className="star">&#9733;</div>
+				            :
+				              <div 
+				                className="star"
+				                onClick={() => this.starred(recipe)}
+				              >
+				                &#9734;
+				              </div>
+				          :
+				            <div></div>
+				      
+				        }
 
 					<div className="recipe-text">
 						<a href={recipe.href}>
